@@ -7,7 +7,8 @@ import ProductsContext from '../context/ProductsContext';
 
 const Products = () => {
 
-   const [filteredProducts, setfilteredProducts] = useState<Product[]>([]);
+   //const [filteredProducts, setfilteredProducts] = useState<Product[]>([]);
+
    //Acá se debe crear un fetch
    //ENDPOINT A UTILIZAR
    //https://dummyjson.com/products?limit=10&skip=0
@@ -39,20 +40,20 @@ const Products = () => {
     fetching()
   }, [context.limit,context.skip])
 
-    const handleMaxChange = (event: any) => {
+   /* const handleMaxChange = (event: any) => {
         const value = event.target.value;
         console.log(value);
-        /*
+        
         const filteredPriceProducts = products.filter(item=>{
           return item.price <= value;
         });
         setfilteredProducts(filteredPriceProducts);
         if(value == ''){
           setfilteredProducts(products);
-        }*/
+        }
         // Completar la función de manera que filtre todos los productos donde el precio sea menor al ingresado (NO Api Request).
         // Si el campo de texto está vacío se deben mostrar todos los productos sin filtro alguno por precio. 
-    };
+    };*/
     
   return (
       <>

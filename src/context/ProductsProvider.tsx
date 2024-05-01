@@ -6,7 +6,7 @@ import ProductsContext from './ProductsContext'
 const ProductsProvider = ({children}: {children: ReactNode}) => {
   const [productId, setProductId] = useState(0)
   const [skip, setSkip] = useState(1)
-  const [limit, setLimit] = useState(0)
+  const [limit, setLimit] = useState(10)
 
   return (
     <ProductsContext.Provider value={{productId, setProductId, skip,setSkip,limit, setLimit}}>
