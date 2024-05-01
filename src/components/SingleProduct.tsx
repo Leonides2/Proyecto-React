@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import ProductsContext from "../context/ProductsContext";
+import "./css/Profile.css"
 
 const SingleProduct = ({product}:{product: Product}) => {
 
@@ -16,9 +17,17 @@ const SingleProduct = ({product}:{product: Product}) => {
  // Reemplazar lo necesario del HTML para que muestre los datos del producto, debe mostrar la imagen (thumnail) en el src del img, además mostrar el price y el title
   return (
     <div className='result-item'>
-                    <img width={'100%'} height={150} src={product.avatar}></img>
-                    <strong>Job: {product.job}</strong>
-                    <div className='product-title'>{product.name} <button onClick={()=>handleView(product.id)}>View</button></div>
+                    <figure className="fir-image-figure">
+                        <a className="fir-imageover" rel="noopener" target="_blank" >
+                            <img className="fir-author-image fir-clickcircle" src={product.avatar} alt={product.name}></img>
+                        </a>
+
+                        <figcaption>
+                            <div className="fig-author-figure-title">{product.name }</div>
+                            <div className="fig-author-figure-title">Job: {product.job}</div>
+                            <button onClick={()=>handleView(product.id)}>View</button>
+                        </figcaption>
+                    </figure>
                 </div>
   )
 }

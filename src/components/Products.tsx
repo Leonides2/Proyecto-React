@@ -29,7 +29,6 @@ const Products = () => {
       const options = setOptions(context.skip, context.limit); 
       const response = await fetch(options); 
       const data = await response.json(); 
-      console.log(data)
       setProducts(data.items);
   } catch (error) {
         console.error(error);
