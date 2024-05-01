@@ -7,7 +7,6 @@ const SingleProduct = ({product}:{product: Product}) => {
  //Se debe utilizar el type Product de la carpeta types
 
  const handleView = (productId: number) => {
-  
   setProductId(productId);
    //COMPLETAR LA FUNCIÓN DE MANERA QUE AL PRESIONAR EL BOTÓN VIEW Se
    //MUESTREN LOS DETALLES EN EL ESPACIO ADECUADO EN DetailProduct.tsx el RATING y EL STOCK

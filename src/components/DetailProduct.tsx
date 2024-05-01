@@ -12,7 +12,7 @@ const DetailProduct = () => {
 
     useEffect(() => {
         if(productId != 0)
-        fetch(`https://dummyjson.com/products/${productId}`) //${id}
+        fetch(`'https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users?/${productId}`) //${id}
         .then(res => res.json())
         .then(product => {
             console.log(product);
@@ -23,8 +23,8 @@ const DetailProduct = () => {
     return (
         <div>
             <strong><h2>Details: </h2></strong>
-            <p><strong>Rating: {product?.rating}</strong></p>
-            <p><strong>Stock: {product?.stock}</strong></p>
+            <p><strong>Created At: {product?.createdAt}</strong></p>
+            <p><strong>Iban: {product?.account}</strong></p>
         </div>
     )
 }
