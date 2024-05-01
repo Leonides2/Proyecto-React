@@ -1,10 +1,11 @@
 
-const SelectSize = ({setSize}:{setSize:any}) => {
+const SelectSize = ({setLimit}:{setLimit: (Limit: number) => void}) => {
+
 
   const handleChange = (event: any) => {
     const value = event.target.value;
     console.log(value);
-    setSize(value);    
+    setLimit(value);    
   };
 
   return (

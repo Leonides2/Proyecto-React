@@ -17,9 +17,9 @@ const SingleProduct = ({product}:{product: Product}) => {
  // Reemplazar lo necesario del HTML para que muestre los datos del producto, debe mostrar la imagen (thumnail) en el src del img, además mostrar el price y el title
   return (
     <div className='result-item'>
-                    <img width={'100%'} height={150} src={product.thumbnail}></img>
-                    <strong>$ {product.price}</strong>
-                    <div className='product-title'>{product.title} <button onClick={()=>handleView(product.id)}>View</button></div>
+                    <img width={'100%'} height={150} src={product.avatar}></img>
+                    <strong>Job: {product.job}</strong>
+                    <div className='product-title'>{product.name} <button onClick={()=>handleView(product.id)}>View</button></div>
                 </div>
   )
 }
