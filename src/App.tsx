@@ -1,7 +1,8 @@
 
 import './App.css'
-import Products from './components/Products'
-import ProductsProvider from './context/ProductsProvider'
+import List from './components/List'
+import UsersTable from './components/UsersTable'
+import ProductsProvider from './context/UsersProvider'
 
 function App() {
 
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
       <ProductsProvider>
-        <Products></Products>
+        <UsersTable/>
+        <List/>
       </ProductsProvider>
     </>
   )

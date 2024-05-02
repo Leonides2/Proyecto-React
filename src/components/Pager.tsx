@@ -1,16 +1,29 @@
-import { useContext } from "react";
-import ProductsContext from "../context/ProductsContext";
+import { useContext, useEffect, useState } from "react";
+import ProductsContext from "../context/UsersContext";
 
 const Pager = () => {
 
-  let pages = [1,2,3,4,5,6,7,8,9];
-
-  const {setSkip} = useContext(ProductsContext);
+  const [pages, setPages]= useState<number[]>([1,2,3,4,5,6,7,8,9])
+  const context = useContext(ProductsContext);
 
   const handleChangePage = (value: number) => {
-    console.log(value)
-    setSkip(value);
+    context.setSkip(value);
   };
+
+  useEffect(()=>{ 
+    
+    if(context.limit < context.count){
+        let newpags= Math.ceil(context.count / context.limit)
+        let aux: number[] = [];
+        for(newpags; newpags>=1; newpags--){
+            aux.unshift(newpags)
+        }
+        setPages(aux);
+    }
+    
+    
+
+  }, [context.limit, context.skip])
 
   return (
     <div className='pager'>
