@@ -40,7 +40,7 @@ const DetailProduct = () => {
         <div>
             <strong><h2>Details: </h2></strong>
             <p><strong>BirthDate: {product?.birthdate}</strong></p>
-            <p><strong>Iban: {product?.account}</strong></p>
+            <p><strong>Iban: {product?.phone}</strong></p>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 //CRERAR EL Product type
 type Product = {
-    account:string,
-    avatar: string,
+    phone:string,
+    image: string,
     birthdate: number,
     id: number,
     job: string,

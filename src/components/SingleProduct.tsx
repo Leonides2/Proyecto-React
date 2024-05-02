@@ -19,7 +19,7 @@ const SingleProduct = ({product}:{product: Product}) => {
     <div className='result-item'>
                     <figure className="fir-image-figure">
                         <a className="fir-imageover" rel="noopener" target="_blank" >
-                            <img className="fir-author-image fir-clickcircle" src={product.avatar} alt={product.name}></img>
+                            <img className="fir-author-image fir-clickcircle" src={product.image} alt={product.name}></img>
                         </a>
 
                         <figcaption>
