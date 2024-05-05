@@ -49,7 +49,7 @@ return (
                 </tr>
             </thead>
             <tbody>
-                {table?.columns[0].rows.map((row, rowIndex) => (
+                {table?.columns[0].rows.map((_row, rowIndex) => (
                     <tr key={rowIndex}>
                         {table.columns.map((column, colIndex) => (
                             <td key={colIndex}>{column.rows[rowIndex].content}</td>

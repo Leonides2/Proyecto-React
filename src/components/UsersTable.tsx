@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import UserInfo from './UserInfo';
 import UsersContext from '../context/UsersContext';
 
-const Products = () => {
+const UsersTable = () => {
 
    //const [filteredProducts, setfilteredProducts] = useState<Product[]>([]);
 
@@ -66,4 +66,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default UsersTable
