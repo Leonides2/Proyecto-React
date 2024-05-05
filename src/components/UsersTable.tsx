@@ -2,6 +2,10 @@ import SelectSize from './SelectSize';
 import { useContext, useEffect, useState } from 'react';
 import UserInfo from './UserInfo';
 import UsersContext from '../context/UsersContext';
+import './css/UsersTable.css'
+import backArrow from '../assets/back-arrow.png'
+import rightArrow from '../assets/right-arrow.png'
+
 
 const UsersTable = () => {
 
@@ -46,20 +50,32 @@ const UsersTable = () => {
     
   return (
       <>
-          <div style={{display: 'flex', gap: '24px'}}>
-            <div>
-              <div style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
+          <div className='carrussel' id='carrussel'>
+
+              <div>
+
                 <h2>Select Size: </h2> 
                 <SelectSize setLimit={context.setLimit}/>
-              </div>
+
+
+                </div>
               <div className='results-container'>
-                  <div className='results'>
+                <div className='arrow-container'>
+                  <img src={backArrow}></img>
+                </div>
+                  <div className='results' >
+                    
                      {users.map(item=>(
                       <UserInfo key={item.id} user={item}/>
                      ))}
+                     
                   </div>
+                <div className='arrow-container'>
+                  <img src={rightArrow}></img>
+                </div>
+
               </div>
-            </div>
+
           </div>
       </>
     

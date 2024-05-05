@@ -1,6 +1,5 @@
 
 
-/* Table Styles */
 
 .table-wrapper{
     margin: 10px 70px 70px;
@@ -15,7 +14,7 @@
     width: 100%;
     max-width: 100%;
     white-space: nowrap;
-    background-color: #1a1a1a;
+    background-color: #ffffff;
 }
 
 .fl-table td, .fl-table th {
@@ -24,25 +23,26 @@
 }
 
 .fl-table td {
-    border-right: 1px solid #f8f8f863;
-    border-left: 1px solid #f8f8f863;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
     font-size: 12px;
 }
 
 .fl-table thead th {
     color: #ffffff;
-    background: #4FC3A1;
+    background: #00000060;
 }
 
 
 .fl-table thead th:nth-child(odd) {
     color: #ffffff;
-    background: #324960;
+    background: #0000004f;
 }
 
+/*
 .fl-table tr:nth-child(even) {
     background: #242424;
-}
+}*/
 
 /* Responsive */
 

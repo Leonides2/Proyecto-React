@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 0.1rem rgba(128, 128, 128, 0.616) solid;
+    padding: 1rem;
+}
+
+#navbar{
+    grid-area: nav;
+}
+.favicon-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.favicon-container h1{
+    font-style: normal;
+    text-decoration: none;
+}
+
+img{
+    height: 6vh;
+    width: 6vh;
+    cursor: pointer;
+}

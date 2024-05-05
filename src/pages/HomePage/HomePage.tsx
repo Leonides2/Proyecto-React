@@ -1,10 +1,15 @@
+import List from "../../components/List"
+import UsersTable from "../../components/UsersTable"
+import ProductsProvider from "../../context/UsersProvider"
 
-type Props = {}
 
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return (
     <>
-      
+       <ProductsProvider>
+        <UsersTable/>
+        <List/>
+      </ProductsProvider>
     </>
   )
 

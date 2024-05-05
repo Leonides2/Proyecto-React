@@ -1,10 +1,10 @@
-import React from 'react'
+import { FormUserPost } from '../../forms/FormUserPost'
 
-type Props = {}
-
-const CompanyPage = (props: Props) => {
+const CompanyPage = () => {
   return (
-    <div>CompanyPage</div>
+    <>
+      <FormUserPost/>
+    </>
   )
 }
 

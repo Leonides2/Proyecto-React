@@ -1,9 +1,19 @@
 #root {
-  max-width: 1280px;
+  max-width: 100dvw;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   display: grid;
+  grid-template-areas: 
+  "nav"
+  "main"
+  "footer"
+  ;
+  grid-template-rows: 10% 1fr 10%;
+  grid-template-columns: 100vw;
+}
+
+#main{
+  grid-area: main;
 }
 
 .logo {
@@ -36,8 +46,4 @@
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

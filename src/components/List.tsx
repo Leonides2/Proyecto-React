@@ -38,7 +38,7 @@ const List = () => {
 }, [users]);
 
 return (
-    <div className='UserList'>
+    <div className='user-list' id='user-list'>
     <div className="table-wrapper">
         <table className="fl-table">
             <thead>
