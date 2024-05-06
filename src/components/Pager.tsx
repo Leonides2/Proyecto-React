@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import ProductsContext from "../context/UsersContext";
+import './css/Pager.css'
 
 const Pager = () => {
 

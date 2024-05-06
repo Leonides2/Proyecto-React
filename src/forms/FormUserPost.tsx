@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import { SubmitHandler, useForm } from 'react-hook-form'
+import './form.css'
 
 export const FormUserPost = () => {
     
@@ -74,7 +75,7 @@ export const FormUserPost = () => {
             </div>
             <div className="form-group">
                 <label>Fecha de nacimiento: </label>
-                <input type='text' {...register("birthdate",{
+                <input type='date' {...register("birthdate",{
                     required:true
                 })}/>
                 {errors.birthdate?.type === "required" && <p className="error-message">Espacio requerido</p>}

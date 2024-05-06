@@ -3,16 +3,13 @@ import { useContext, useEffect, useState } from 'react';
 import UserInfo from './UserInfo';
 import UsersContext from '../context/UsersContext';
 import './css/UsersTable.css'
-import backArrow from '../assets/back-arrow.png'
-import rightArrow from '../assets/right-arrow.png'
+
 
 
 const UsersTable = () => {
 
-   //const [filteredProducts, setfilteredProducts] = useState<Product[]>([]);
-
    const [users, setUsers] = useState<User[]>([]);
-   const context = useContext(UsersContext)
+   const context = useContext(UsersContext);
 
    function setOptions(skip= 10,limit= 10){
       return 'https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users?limit='+limit+'&page='+ skip
@@ -23,30 +20,18 @@ const UsersTable = () => {
       const options = setOptions(context.skip, context.limit); 
       const response = await fetch(options); 
       const data = await response.json(); 
+      context.setCount(data.count)
       setUsers(data.items);
   } catch (error) {
         console.error(error);
       }
   }
 
+
   useEffect(()=>{
     fetching()
   }, [context.skip,context.limit])
 
-   /* const handleMaxChange = (event: any) => {
-        const value = event.target.value;
-        console.log(value);
-        
-        const filteredPriceProducts = products.filter(item=>{
-          return item.price <= value;
-        });
-        setfilteredProducts(filteredPriceProducts);
-        if(value == ''){
-          setfilteredProducts(products);
-        }
-        // Completar la función de manera que filtre todos los productos donde el precio sea menor al ingresado (NO Api Request).
-        // Si el campo de texto está vacío se deben mostrar todos los productos sin filtro alguno por precio. 
-    };*/
     
   return (
       <>
@@ -61,17 +46,19 @@ const UsersTable = () => {
                 </div>
               <div className='results-container'>
                 <div className='arrow-container'>
-                  <img src={backArrow}></img>
+                 
+
+
                 </div>
                   <div className='results' >
-                    
-                     {users.map(item=>(
-                      <UserInfo key={item.id} user={item}/>
-                     ))}
+                      {users.map((index) => (
+                          <UserInfo user={index} />
+                      ))}
                      
                   </div>
                 <div className='arrow-container'>
-                  <img src={rightArrow}></img>
+
+
                 </div>
 
               </div>

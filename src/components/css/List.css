@@ -52,12 +52,12 @@
         width: 100%;
     }
     .table-wrapper:before{
-        content: "Scroll horizontally >";
+        content: "Scroll >>";
         display: block;
         text-align: right;
         font-size: 11px;
-        color: #1a1a1a;
-        padding: 0 0 10px;
+        color: #ffffff,
+        /*padding: 0px 0px 10px;*/
     }
     .fl-table thead, .fl-table tbody, .fl-table thead th {
         display: block;
@@ -98,7 +98,7 @@
         background: transparent;
     }
     .fl-table tr td:nth-child(odd) {
-        background: #242424;
+        background: #ffffff;
         border-right: 1px solid #E6E4E4;
     }
     .fl-table tr td:nth-child(even) {

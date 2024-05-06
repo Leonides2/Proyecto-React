@@ -1,17 +1,20 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+
     background-color: rgb(255, 255, 255);
-    border-bottom: 0.1rem rgba(128, 128, 128, 0.616) solid;
     padding: 1rem;
 }
+
 
 #navbar{
     grid-area: nav;
 }
+
 .favicon-container{
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .favicon-container h1{
@@ -19,8 +22,32 @@
     text-decoration: none;
 }
 
+.navbar button{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.navbar .favicon-container .title-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
 img{
     height: 6vh;
     width: 6vh;
     cursor: pointer;
+}
+
+.navbar h1 {
+    font-size: 1rem;
 }

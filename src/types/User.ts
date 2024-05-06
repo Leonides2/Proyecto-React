@@ -4,8 +4,10 @@ type User = {
     address: string,
     image:string,
     name: string,
+    lastName: string,
     job: string,
     phone:string,
-    birthdate: number
+    birthdate: number,
+    addAt: string
 }
 
