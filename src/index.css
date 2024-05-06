@@ -369,3 +369,27 @@ i {
   justify-content: center;
   width: 100%;
 }
+
+/*FormUserPost*/
+
+.form-container {
+  background-color: #f0f0f0; 
+  padding: 20px;
+  border-radius: 8px; 
+  display: flex; 
+  flex-direction: column; 
+  max-width: 500px; 
+  margin: 0 auto; 
+}
+
+.form-group {
+  margin-bottom: 15px; 
+}
+
+.form-group label {
+  font-weight: bold; 
+}
+
+.error-message {
+  color: red; 
+}
