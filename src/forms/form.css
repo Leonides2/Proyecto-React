@@ -26,7 +26,9 @@ button:active {
 
 .form-container {
     background-color: #f0f0f0; 
-    padding: 20px;
+    padding: 20px;  
+    justify-content: center;
+    align-items: center;
     border-radius: 8px; 
     display: flex; 
     flex-direction: column; 
@@ -35,7 +37,7 @@ button:active {
   }
   
   .form-group {
-    margin-bottom: 15px; 
+    margin-bottom: 25px; 
   }
   
   .form-group label {
