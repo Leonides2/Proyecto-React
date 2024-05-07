@@ -1,22 +1,16 @@
-import {FormUserPut} from "../../forms/FormUserPut.tsx"
-import { useParams } from "react-router-dom"
-import { useState } from "react";
-
-function responseIsValid(response: any): Boolean {
-    return response != "Not found";
-}
+import React, { useState } from 'react'
+import { useParams } from 'react-router';
+import { UserComponent } from '../../components/UserComponent';
 
 
-const EditPage = () => {
 
+export const UserViewPage = () => {
     const { userId } = useParams();
-
-    let [user, setUser] = useState<undefined | User>(undefined);
+    const [user, setUser] = useState<User |undefined>()
 
     fetch(`https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users/${userId}`)
     .then(response => response.json())
     .then(response => {
-        if (responseIsValid(response)) {
             setUser({
                 id: response.id,
                 address: response.address,
@@ -28,14 +22,13 @@ const EditPage = () => {
                 birthdate: response.birthdate,
                 addAt: response.addAt
             })
-        }
     })
 
+    
   return (
-    <>
-        { user != undefined ? <FormUserPut user={user} /> : <div>Error: no se se pudo encontrar el usuario</div> }
+    <>    
+    { user != undefined ? <UserComponent user={user} /> : <div>Error: no se se pudo encontrar el usuario</div> }
     </>
+
   )
 }
-
-export default EditPage

@@ -8,10 +8,10 @@ export const FormUserPut = ({user}: {user: User}) => {
     const {register,handleSubmit, formState:{errors}, setValue} = useForm<User>();
 
     const onSubmit: SubmitHandler<User> = async(data) => {
-
+        let id= '/' + user.id
         try {
-            const response = await fetch('https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users', {
-                method: 'POST',
+            const response = await fetch('https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users'+ id, {
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },

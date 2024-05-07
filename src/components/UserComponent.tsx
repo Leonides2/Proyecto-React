@@ -1,29 +1,28 @@
 
-type Props = User;
 
-const UserComponent = (props: Props) => {
+export const UserComponent = ({user}:{user: User}) => {
   return (
     <form>
       <div>
-        Id: {props.id}
+        Id: {user.id}
       </div>
       <div>
-        Nombre: {props.name}
+        Nombre: {user.name}
       </div>
       <div>
-        Apellido: {props.lastName}
+        Apellido: {user.lastName}
       </div>
       <div>
-        Trabajo: {props.job}
+        Trabajo: {user.job}
       </div>
       <div>
-        Direccion: {props.address}
+        Direccion: {user.address}
       </div>
       <div>
-        Telefono: {props.phone}
+        Telefono: {user.phone}
       </div>
       <div>
-        Fecha de nacimiento: {props.birthdate}
+        Fecha de nacimiento: {user.birthdate}
       </div>
     </form>
   )

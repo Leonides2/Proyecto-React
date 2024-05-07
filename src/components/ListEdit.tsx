@@ -3,7 +3,7 @@ import './css/List.css'
 import { Link } from "react-router-dom"
 
 
-const List = ({table}:{table:Table |undefined}) => {
+const ListEdit = ({table}:{table:Table |undefined}) => {
 
     return (
         <div className='user-list' id='user-list'>
@@ -24,8 +24,11 @@ const List = ({table}:{table:Table |undefined}) => {
                                 <td key={colIndex}>{column.rows[rowIndex].content}</td>
                             ))}
                             <td>
-                                <Link className="edit-user-button" to={`/Proyecto-React/view/${table.columns[0].rows[rowIndex].content}`}>
-                                    <button>Ver</button>
+                                <Link className="edit-user-button" to={`/Proyecto-React/edit/${table.columns[0].rows[rowIndex].content}`}>
+                                    <button>Edit</button>
+                                    </Link>
+                                <Link className="edit-user-button" to={`/Proyecto-React/edit/${table.columns[0].rows[rowIndex].content}`}>
+                                    <button>Delete</button>
                                     </Link>
                             </td>
                         </tr>
@@ -38,4 +41,4 @@ const List = ({table}:{table:Table |undefined}) => {
 
 }
 
-export default List;
+export default ListEdit

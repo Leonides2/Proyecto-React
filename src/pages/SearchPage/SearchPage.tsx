@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import List from "../../components/List"
 import parseUserToTable from "../../logic/TableFunctions";
 import UsersContext from "../../context/UsersContext";
 import { SubmitHandler, useForm } from "react-hook-form";
 import SelectSize from "../../components/SelectSize";
 import './SearchPage.css'
 import Pager from "../../components/Pager";
+import ListEdit from "../../components/ListEdit";
 
 type Sort = {
     atribute: string,
@@ -100,7 +100,7 @@ useEffect(() => {
           </div>
         </form>
       </div>
-      <List table={table}/>
+      <ListEdit table={table}/>
       <Pager/>
     </>
   )
