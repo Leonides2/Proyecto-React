@@ -4,6 +4,7 @@ const CompanyPage = () => {
   return (
     <>
       <FormUserPost/>
+      
     </>
   )
 }

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
+import UsersProvider from './context/UsersProvider'
 
 function App() {
 
@@ -11,7 +12,9 @@ function App() {
     <>
       <Navbar/>
       <main id='main'>
-        <Outlet/>
+        <UsersProvider>
+          <Outlet/>
+        </UsersProvider>
       </main>
       <Footer/>
     </>

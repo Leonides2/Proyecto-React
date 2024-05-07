@@ -4,6 +4,7 @@ import App from "../App";
 import CompanyPage from "../pages/CompanyPage/CompanyPage";
 import SearchPage from "../pages/SearchPage/SearchPage";
 import HomePage from "../pages/HomePage/HomePage";
+import { FormUserPost } from "../forms/FormUserPost";
 
 export const router = createBrowserRouter([
     {
@@ -15,5 +16,11 @@ export const router = createBrowserRouter([
         {path:"", element: <HomePage/>},
       ],
       errorElement: <ErrorPage/>,
+    },{
+      path: "/Proyecto-React/company",
+      element: <CompanyPage/>,
+      children: [
+        {path: "addUser", element: <FormUserPost/>}
+      ]
     },
   ])

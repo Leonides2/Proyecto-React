@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 import UsersContext from './UsersContext'
 
-const ProductsProvider = ({children}: {children: ReactNode}) => {
+const UsersProvider = ({children}: {children: ReactNode}) => {
   const [UserId, setUserId] = useState(0)
   const [skip, setSkip] = useState(1)
   const [limit, setLimit] = useState(10)
@@ -14,4 +14,4 @@ const ProductsProvider = ({children}: {children: ReactNode}) => {
   )
 }
 
-export default ProductsProvider;
+export default UsersProvider;

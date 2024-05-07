@@ -1,41 +1,10 @@
 
-import { useContext, useEffect, useState } from 'react';
 import './css/List.css'
-import UsersContext from '../context/UsersContext';
-import parseUserToTable from '../logic/TableFunctions';
-import Pager from './Pager';
 
-const List = () => {
-    const [users, setUsers] = useState<User[]>([]);
-    const [table, setTable] = useState<Table>();
-    const context = useContext(UsersContext);
 
-   function setOptions(skip= 1,limit= 10){
-      return 'https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users?limit='+limit+'&page='+ skip
-   }
+const List = ({table}:{table:Table |undefined}) => {
+
    
-  async function fetchData(){
-    try {
-      const options = setOptions(context.skip, context.limit); 
-      const response = await fetch(options); 
-      const data = await response.json(); 
-      context.setCount(data.count)
-      setUsers(data.items);
-  } catch (error) {
-        console.error(error);
-      }
-  }
-
-  useEffect(() => {
-    fetchData();
-}, [context.limit, context.skip]);
-
-  useEffect(() => {
-    if (users.length > 0) {
-        const generatedTable = parseUserToTable(users);
-        setTable(generatedTable);
-    }
-}, [users]);
 
 return (
     <div className='user-list' id='user-list'>
@@ -59,9 +28,6 @@ return (
             </tbody>
         </table>
     </div>
-        <div>
-            <Pager />
-        </div>
     </div>
 )
 

@@ -6,12 +6,17 @@ import SelectSize from './SelectSize';
 
 const SortHeader = () => {
     const context = useContext(UsersContext);
+
   return (
     <>
-          <div className='carrussel' id='carrussel'>
+          <div className='sort-header' id='sort-header'>
             <div>
-                <h2>Select Size: </h2> 
+                Select Size:
                 <SelectSize setLimit={context.setLimit}/>
+                <form>
+                  <label> </label>
+                  <input type="text" />
+                </form>
             </div>
             </div>
 

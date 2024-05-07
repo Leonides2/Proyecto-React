@@ -1,0 +1,14 @@
+.size-select option{
+    border: none;
+    background-color: white;
+}
+
+.size-select{
+    border: none;
+    box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+    background-color: white;
+    height: 4vh;
+    width: 8vw;
+    padding: 1vh;
+    border-radius: 8px;
+}
