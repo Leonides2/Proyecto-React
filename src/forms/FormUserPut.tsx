@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router';
 import { SubmitHandler, useForm } from 'react-hook-form'
 import './form.css'
 
-export const FormUserPost = () => {
+export const FormUserPut = ({user}: {user: User}) => {
     
     const navigate = useNavigate();
     const {register,handleSubmit, formState:{errors}, setValue} = useForm<User>();
@@ -19,10 +19,10 @@ export const FormUserPost = () => {
             });
 
             if (response.ok) {
-                console.log('Usuario agregado correctamente');
+                console.log('Usuario editado correctamente');
                 navigate("/Proyecto-React");
             } else {
-                console.error('Error al agregar usuario:', response.statusText);
+                console.error('Error al editar usuario:', response.statusText);
             }
         } catch (error) {
             console.error('Error en la solicitud POST:', error);
@@ -39,11 +39,11 @@ export const FormUserPost = () => {
     return (
         <>
         <div className="form-container">
-        <h2>Agregar Usuario</h2>
+        <h2>Editar Usuario de Id {user.id}</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
                 <label>Nombre: </label>
-                <input type='text' {...register("name",{
+                <input type='text' defaultValue={user.name} {...register("name",{
                     required: true,
                     pattern: /^[A-Za-z\s]+$/
                 })}/>
@@ -52,14 +52,14 @@ export const FormUserPost = () => {
             </div>
             <div className="form-group">
                 <label>Trabajo: </label>
-                <input type='text' {...register("job",{
+                <input type='text' defaultValue={user.job} {...register("job",{
                     required:true
                 })}/>
                 {errors.job?.type === "required" && <p className="error-message">Espacio requerido</p>}
             </div>
             <div className="form-group">
                 <label>Telefono: </label>
-                <input type='text' {...register("phone",{
+                <input type='text' defaultValue={user.phone} {...register("phone",{
                     required:true
                 })}
                 onChange={(e) => setValue('phone', formatPhone(e.target.value))}
@@ -68,14 +68,14 @@ export const FormUserPost = () => {
             </div>
             <div className="form-group">
                 <label>Direccion: </label>
-                <input type='text' {...register("address",{
+                <input type='text' defaultValue={user.address} {...register("address",{
                     required:true
                 })}/>
                 {errors.address?.type === "required" && <p className="error-message">Espacio requerido</p>}
             </div>
             <div className="form-group">
                 <label>Fecha de nacimiento: </label>
-                <input type='date' {...register("birthdate",{
+                <input type='date' defaultValue={user.birthdate} {...register("birthdate",{
                     required:true
                 })}/>
                 {errors.birthdate?.type === "required" && <p className="error-message">Espacio requerido</p>}
@@ -89,6 +89,8 @@ export const FormUserPost = () => {
     </>
   )
 }
+
+export default FormUserPut;
 
 /*
     address: string,

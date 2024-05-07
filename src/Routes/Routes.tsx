@@ -5,6 +5,7 @@ import CompanyPage from "../pages/CompanyPage/CompanyPage";
 import SearchPage from "../pages/SearchPage/SearchPage";
 import HomePage from "../pages/HomePage/HomePage";
 import { FormUserPost } from "../forms/FormUserPost";
+import EditPage from "../pages/EditPage/EditPage";
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
       children: [
         {path:"company", element: <CompanyPage/>},
         {path:"search", element: <SearchPage/>},
+        {path: "edit/:userId", element: <EditPage/>},
         {path:"", element: <HomePage/>},
       ],
       errorElement: <ErrorPage/>,
@@ -22,5 +24,8 @@ export const router = createBrowserRouter([
       children: [
         {path: "addUser", element: <FormUserPost/>}
       ]
-    },
+    },{
+      path: "/Proyecto-React/edit/:userId",
+      element: <EditPage />,
+    }
   ])

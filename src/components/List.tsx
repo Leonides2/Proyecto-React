@@ -1,12 +1,9 @@
 
 import './css/List.css'
+import { Link } from "react-router-dom"
 
 
 const List = ({table}:{table:Table |undefined}) => {
-
-   const editUser = (userId: number) => {
-    alert(`Edit user ${userId}`)
-   }
 
     return (
         <div className='user-list' id='user-list'>
@@ -26,7 +23,7 @@ const List = ({table}:{table:Table |undefined}) => {
                             {table.columns.map((column, colIndex) => (
                                 <td key={colIndex}>{column.rows[rowIndex].content}</td>
                             ))}
-                            <td><button className="edit-user-button" onClick={() => editUser(Number(table.columns[0].rows[rowIndex].content))}>Edit User</button></td>
+                            <td><Link className="edit-user-button" to={`/Proyecto-React/edit/${table.columns[0].rows[rowIndex].content}`}>Edit User</Link></td>
                         </tr>
                     ))}
                 </tbody>
