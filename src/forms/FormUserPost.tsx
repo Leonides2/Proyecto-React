@@ -39,10 +39,10 @@ export const FormUserPost = () => {
     return (
         <>
         <div className="form-container">
-        <h2>Agregar Usuario</h2>
+        <h2>Add User</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
-                <label>Nombre: </label>
+                <label>Name: </label>
                 <input type='text' {...register("name",{
                     required: true,
                     pattern: /^[A-Za-z\s]+$/
@@ -51,14 +51,14 @@ export const FormUserPost = () => {
                 {errors.name?.type === "pattern" && <p className="error-message">Solo se permiten letras y espacios</p>}
             </div>
             <div className="form-group">
-                <label>Trabajo: </label>
+                <label>Job: </label>
                 <input type='text' {...register("job",{
                     required:true
                 })}/>
                 {errors.job?.type === "required" && <p className="error-message">Espacio requerido</p>}
             </div>
             <div className="form-group">
-                <label>Telefono: </label>
+                <label>Telephone: </label>
                 <input type='text' {...register("phone",{
                     required:true
                 })}
@@ -67,14 +67,14 @@ export const FormUserPost = () => {
                 {errors.phone?.type === "required" && <p className="error-message">Espacio requerido</p>}
             </div>
             <div className="form-group">
-                <label>Direccion: </label>
+                <label>Address: </label>
                 <input type='text' {...register("address",{
                     required:true
                 })}/>
                 {errors.address?.type === "required" && <p className="error-message">Espacio requerido</p>}
             </div>
             <div className="form-group">
-                <label>Fecha de nacimiento: </label>
+                <label>Birthdate: </label>
                 <input type='date' {...register("birthdate",{
                     required:true
                 })}/>
