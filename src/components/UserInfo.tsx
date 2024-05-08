@@ -1,18 +1,8 @@
-import { useContext } from "react";
-import UsersContext from "../context/UsersContext";
+
 import "./css/UserInfo.css"
 
 const SingleProduct = ({user}:{user: User}) => {
 
-  const {setUserId} = useContext(UsersContext);
-
-  /*
- const handleView = (UserId: number) => {
-  setUserId(UserId);
-
- };
-*/
- //<button onClick={()=>handleView(user.id)}>View</button>
 
   return (
     <div className='result-item'>
