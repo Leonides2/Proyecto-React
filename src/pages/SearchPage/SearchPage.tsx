@@ -83,7 +83,6 @@ useEffect(() => {
                 <option value={"lastName"}>LastName</option>
                 <option value={"job"}>Job</option>
                 <option value={"phone"}>Phone</option>
-                <option value={"birthdate"}>Birthdate</option>
                 <option value={"addAt"}>AddAt</option>
             </select>
             

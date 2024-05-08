@@ -1,12 +1,19 @@
 import './css/UserComponent.css'
 import Back from '../assets/back.png'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import UsersContext from '../context/UsersContext'
 
 export const UserComponent = ({user}:{user: User}) => {
+
+  const {setLimit, setSkip} = useContext(UsersContext);
   return (
     <div className='user-data-container'>
       <Link to={'../'} style={{textDecorationLine: 'none'}}>
-        <button>
+        <button onClick={()=>{
+          setLimit(10)
+          setSkip(1)
+          }}>
           <img src={Back} alt="back-arrow" />
           Regresar
         </button>
