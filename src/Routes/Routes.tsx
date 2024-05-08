@@ -7,6 +7,7 @@ import HomePage from "../pages/HomePage/HomePage";
 import { FormUserPost } from "../forms/FormUserPost";
 import EditPage from "../pages/EditPage/EditPage";
 import { UserViewPage } from "../pages/UserViewPage/UserViewPage";
+import { UserDeletePage } from "../pages/UserDeletePage/UserDeletePage";
 
 export const router = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
         {path:"addUser", element: <FormUserPost/>},
         {path: "view/:userId", element: <UserViewPage/>},
         {path: "edit/:userId", element: <EditPage/>},
-        {path: "delete/:userId",element: <UserViewPage />},
+        {path: "delete/:userId",element: <UserDeletePage/>},
         {path:"", element: <CompanyPage/>},
     ],
     errorElement: <ErrorPage/>,

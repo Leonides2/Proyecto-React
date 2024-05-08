@@ -24,13 +24,13 @@ const ListEdit = ({table}:{table:Table |undefined}) => {
                                 <td key={colIndex}>{column.rows[rowIndex].content}</td>
                             ))}
                             <td>
-                                <Link className="edit-user-button" to={`/Proyecto-React/view/${table.columns[0].rows[rowIndex].content}`}>
+                                <Link className="edit-user-button" to={`/Proyecto-React/company/view/${table.columns[0].rows[rowIndex].content}`}>
                                     <button>Ver</button>
                                     </Link>
-                                <Link className="edit-user-button" to={`/Proyecto-React/edit/${table.columns[0].rows[rowIndex].content}`}>
+                                <Link className="edit-user-button" to={`/Proyecto-React/company/edit/${table.columns[0].rows[rowIndex].content}`}>
                                     <button>Editar</button>
                                     </Link>
-                                <Link className="edit-user-button" to={`/Proyecto-React/delete/${table.columns[0].rows[rowIndex].content}`}>
+                                <Link className="edit-user-button" to={`/Proyecto-React/company/delete/${table.columns[0].rows[rowIndex].content}`}>
                                     <button>Eliminar</button>
                                     </Link>
                             </td>

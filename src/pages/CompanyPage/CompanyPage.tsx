@@ -3,9 +3,9 @@ import SelectSize from '../../components/SelectSize'
 import UsersContext from '../../context/UsersContext';
 import parseUserToTable from '../../logic/TableFunctions';
 import Pager from '../../components/Pager';
-import ListHomeView from '../../components/ListHomeView';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import ListEdit from '../../components/ListEdit';
 
 
 type Sort = {
@@ -20,13 +20,17 @@ const CompanyPage = () => {
   const {register,handleSubmit, formState:{errors}} = useForm<Sort>();
   const [search,setSearch] = useState('');
 
-  function setOptions(skip= 10,limit= 10){
-     return 'https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users?limit='+limit+'&page='+ skip
+  function setOptions(skip= 10,limit= 10, search=''){
+    let newSearch='';
+    if(search !== ''){
+      newSearch = '&'+ search
+    }
+     return 'https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users?limit='+limit+'&page='+ skip + newSearch
   }
   
  async function fetching(){
    try {
-     const options = setOptions(context.skip, context.limit); 
+     const options = setOptions(context.skip, context.limit,search); 
      const response = await fetch(options); 
      const data = await response.json(); 
      context.setCount(data.count)
@@ -91,7 +95,7 @@ const onSubmit: SubmitHandler<Sort> = async(data) => {
               <button> Agregar usuario</button>
           </Link>
         </form>
-        <ListHomeView table={table}/>
+        <ListEdit table={table}/>
         <Pager/>
     </>
   )

@@ -11,7 +11,7 @@ export const FormUserDelete = ({user}: {user: User}) => {
         let id= '/' + user.id
 
         try {
-            const response = await fetch('https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users'+ id);
+            const response = await fetch('https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users'+ id, {method: 'DELETE'});
 
             if (response.ok) {
                 console.log('Usuario Eliminado correctamente');
