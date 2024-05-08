@@ -3,7 +3,7 @@ import './css/List.css'
 import { Link } from "react-router-dom"
 
 
-const List = ({table}:{table:Table |undefined}) => {
+const ListView = ({table}:{table:Table |undefined}) => {
 
     return (
         <div className='user-list' id='user-list'>
@@ -38,4 +38,4 @@ const List = ({table}:{table:Table |undefined}) => {
 
 }
 
-export default List;
+export default ListView;

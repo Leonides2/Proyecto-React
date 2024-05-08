@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import List from "../../components/List"
 import UsersCarusel from "../../components/UsersCarusel"
 import UsersContext from "../../context/UsersContext";
 import SelectSize from "../../components/SelectSize";
 import Pager from "../../components/Pager";
 import parseUserToTable from "../../logic/TableFunctions";
-
+import './HomePage.css'
+import ListHomeView from "../../components/ListHomeView";
 
 const HomePage = () => {
 
@@ -45,12 +45,16 @@ useEffect(() => {
 
   return (
     <>
-        <div>
-        Select Size: 
-        <SelectSize setLimit={context.setLimit}/>
+        <div className="header-container">
+          <div>
+            Elementos por pagina:
+          </div>
+          <div> 
+            <SelectSize/>
+          </div>
         </div>
         <UsersCarusel users={users}/>
-        <List table={table}/>
+        <ListHomeView table={table}/>
         <Pager />
     </>
   )

@@ -23,7 +23,7 @@ export const Navbar = () => {
             <Link to={'/Proyecto-React/search'}>
               <button> Search </button>
             </Link>
-            <Link to={'/Proyecto-React/company'}>
+            <Link to={'/Proyecto-React/company'} style={{textDecorationLine: 'none'}}>
             <button className='title-button'> 
               Maintenance
               <img src={icon}/>

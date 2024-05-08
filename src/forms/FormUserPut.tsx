@@ -20,12 +20,12 @@ export const FormUserPut = ({user}: {user: User}) => {
 
             if (response.ok) {
                 console.log('Usuario editado correctamente');
-                navigate("/Proyecto-React");
+                navigate("/Proyecto-React/company");
             } else {
                 console.error('Error al editar usuario:', response.statusText);
             }
         } catch (error) {
-            console.error('Error en la solicitud POST:', error);
+            console.error('Error en la solicitud PUT:', error);
         }
 
     };

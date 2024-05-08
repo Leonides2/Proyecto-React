@@ -1,17 +1,17 @@
+import { useState } from "react";
+import { useParams } from "react-router";
+import FormUserDelete from "../../forms/FormUserDelete";
 
-import { useParams } from 'react-router';
-import { UserComponent } from '../../components/UserComponent';
-import { useState } from 'react';
+ export const UserDeletePage = () => {
 
-
-
-export const UserViewPage = () => {
     const { userId } = useParams();
-    const [user, setUser] = useState<User |undefined>()
+
+    let [user, setUser] = useState<undefined | User>(undefined);
 
     fetch(`https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users/${userId}`)
     .then(response => response.json())
     .then(response => {
+
             setUser({
                 id: response.id,
                 address: response.address,
@@ -25,11 +25,9 @@ export const UserViewPage = () => {
             })
     })
 
-    
   return (
-    <>    
-    { user != undefined ? <UserComponent user={user} /> : <div>Error: no se se pudo encontrar el usuario</div> }
+    <>
+        { user != undefined ? <FormUserDelete user={user} /> : <div>Error: no se se pudo encontrar el usuario</div> }
     </>
-
   )
 }

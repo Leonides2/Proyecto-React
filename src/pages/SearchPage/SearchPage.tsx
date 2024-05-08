@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import SelectSize from "../../components/SelectSize";
 import './SearchPage.css'
 import Pager from "../../components/Pager";
-import ListEdit from "../../components/ListEdit";
+import ListView from "../../components/ListView";
 
 type Sort = {
     atribute: string,
@@ -21,7 +21,7 @@ const SearchPage = () => {
   const [search,setSearch] = useState('');
   const context = useContext(UsersContext);
   const [table, setTable] = useState<Table>();
-  const {register,handleSubmit, formState:{errors}, setValue} = useForm<Sort>();
+  const {register,handleSubmit, formState:{errors}} = useForm<Sort>();
 
   function setOptions(skip= 10,limit= 10, search=''){
     let newSearch='';
@@ -35,7 +35,6 @@ const SearchPage = () => {
    try {
      const options = setOptions(context.skip, context.limit,search); 
      const response = await fetch(options); 
-     console.log(response,search)
          if (response.ok) {
              console.log('Usuario encontrado');
              const data = await response.json(); 
@@ -72,7 +71,6 @@ useEffect(() => {
   return (
     <>
       <div>
-        <SelectSize setLimit={context.setLimit}/>
         <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
           <div>
             Buscar:
@@ -96,11 +94,17 @@ useEffect(() => {
             {errors.value?.type === "required" && <p className="error-message">Espacio requerido</p>}
           </div>
           <div>
-              <input type='submit' value='Buscar'/>
+              <input type='submit' value='Buscar' onClick={()=>context.setSkip(1)}/>
+          </div>
+          <div>
+            Elementos por pagina:
+          </div>
+          <div> 
+            <SelectSize/>
           </div>
         </form>
       </div>
-      <ListEdit table={table}/>
+      <ListView table={table}/>
       <Pager/>
     </>
   )

@@ -1,0 +1,37 @@
+.user-data-container{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 10rem 10rem;
+    padding: 2rem;
+    align-items: start;
+    background-color: white;
+    box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+    border: none;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.user-data-container div{
+    font-size: 16px;
+}
+
+.user-data-container button{
+    font-size: 0.8rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+    background-color: white;
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.user-data-container button img{
+    height: 1rem;
+    width: 1rem;
+}

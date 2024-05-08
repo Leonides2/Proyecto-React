@@ -12,12 +12,12 @@ const Pager = () => {
   };
 
   useEffect(()=>{ 
-    if(context.limit < context.count){
+  
         let newpags= Math.ceil(context.count / context.limit)
         let aux: number[] = [];
         for(newpags; newpags>=1; newpags--){
             aux.unshift(newpags)
-        }
+        
         setPages(aux);
       }
     
