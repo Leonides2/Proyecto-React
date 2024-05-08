@@ -25,7 +25,7 @@ const ListView = ({table}:{table:Table |undefined}) => {
                             ))}
                             <td>
                                 <Link className="edit-user-button" to={`/Proyecto-React/search/view/${table.columns[0].rows[rowIndex].content}`}>
-                                    <button>Ver</button>
+                                    <button>View</button>
                                     </Link>
                             </td>
                         </tr>

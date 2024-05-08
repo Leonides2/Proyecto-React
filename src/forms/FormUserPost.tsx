@@ -47,15 +47,24 @@ export const FormUserPost = () => {
                     required: true,
                     pattern: /^[A-Za-z\s]+$/
                 })}/>
-                {errors.name?.type === "required" && <p className="error-message">Espacio requerido</p>}
-                {errors.name?.type === "pattern" && <p className="error-message">Solo se permiten letras y espacios</p>}
+                {errors.name?.type === "required" && <p className="error-message">This field is required</p>}
+                {errors.name?.type === "pattern" && <p className="error-message">Only letters and spaces are allowed</p>}
+            </div>
+            <div className="form-group">
+                <label>Last Name: </label>
+                <input type='text' {...register("lastName",{
+                    required: true,
+                    pattern: /^[A-Za-z\s]+$/
+                })}/>
+                {errors.lastName?.type === "required" && <p className="error-message">This field is required</p>}
+                {errors.lastName?.type === "pattern" && <p className="error-message">Only letters and spaces are allowed</p>}
             </div>
             <div className="form-group">
                 <label>Job: </label>
                 <input type='text' {...register("job",{
                     required:true
                 })}/>
-                {errors.job?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.job?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
                 <label>Telephone: </label>
@@ -64,24 +73,25 @@ export const FormUserPost = () => {
                 })}
                 onChange={(e) => setValue('phone', formatPhone(e.target.value))}
                 />
-                {errors.phone?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.phone?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
                 <label>Address: </label>
                 <input type='text' {...register("address",{
                     required:true
                 })}/>
-                {errors.address?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.address?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
                 <label>Birthdate: </label>
                 <input type='date' {...register("birthdate",{
                     required:true
                 })}/>
-                {errors.birthdate?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.birthdate?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
-                <input type='submit' value='Enviar'/>
+                <input type="button"  value='Cancel' onClick={()=>navigate('/Proyecto-React/company')}/>
+                <input type='submit' value='Send'/>
             </div>
 
         </form>

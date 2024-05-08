@@ -73,7 +73,7 @@ useEffect(() => {
       <div>
         <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
           <div>
-            Buscar:
+            Search:
           </div>
           <div>
             <select {...register("atribute")}>
@@ -90,13 +90,13 @@ useEffect(() => {
           <div className="text-area">
             <label></label>
             <input type="text" {...register("value",{required:true})} />
-            {errors.value?.type === "required" && <p className="error-message">Espacio requerido</p>}
+            {errors.value?.type === "required" && <p className="error-message">Required</p>}
           </div>
           <div>
-              <input type='submit' value='Buscar' onClick={()=>context.setSkip(1)}/>
+              <input type='submit' value='Search' onClick={()=>context.setSkip(1)}/>
           </div>
           <div>
-            Elementos por pagina:
+            Elements per page:
           </div>
           <div> 
             <SelectSize/>
