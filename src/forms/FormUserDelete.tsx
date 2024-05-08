@@ -28,31 +28,35 @@ export const FormUserDelete = ({user}: {user: User}) => {
     return (
         <>
         <div className="form-container">
-        <h2>Eliminar usuario {user.id} ?</h2>
+        <h2>Delete User {user.id} ?</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
-                <label>Nombre: </label>
+                <label>Name: </label>
                 <input type='text' defaultValue={user.name} disabled/>
             </div>
             <div className="form-group">
-                <label>Trabajo: </label>
+                <label>Last Name: </label>
+                <input type='text' defaultValue={user.lastName} disabled/>
+            </div>
+            <div className="form-group">
+                <label>Job: </label>
                 <input type='text' defaultValue={user.job} disabled/>
             </div>
             <div className="form-group">
-                <label>Telefono: </label>
+                <label>Phone: </label>
                 <input type='text' defaultValue={user.phone} disabled/>
             </div>
             <div className="form-group">
-                <label>Direccion: </label>
+                <label>Address: </label>
                 <input type='text' defaultValue={user.address} disabled/>
             </div>
             <div className="form-group">
-                <label>Fecha de nacimiento: </label>
+                <label>Birthdate: </label>
                 <input type='date' defaultValue={user.birthdate} disabled/>
             </div>
             <div className="form-group">
-                <input type="button"  value='Cancelar' onClick={()=>navigate('/Proyecto-React/company')}/>
-                <input type='submit' value='Eliminar' />
+                <input type="button"  value='Cancel' onClick={()=>navigate('/Proyecto-React/company')}/>
+                <input type='submit' value='Delete' />
             </div>
 
         </form>

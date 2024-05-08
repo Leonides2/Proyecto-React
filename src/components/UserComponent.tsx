@@ -15,32 +15,32 @@ export const UserComponent = ({user}:{user: User}) => {
           setSkip(1)
           }}>
           <img src={Back} alt="back-arrow" />
-          Regresar
+          Back
         </button>
       </Link>
       <div>
         Id: {user.id}
       </div>
       <div>
-        Nombre: {user.name}
+        Name: {user.name}
       </div>
       <div>
-        Apellido: {user.lastName}
+        Last Name: {user.lastName}
       </div>
       <div>
-        Trabajo: {user.job}
+        Job: {user.job}
       </div>
       <div>
-        Direccion: {user.address}
+        Address: {user.address}
       </div>
       <div>
-        Telefono: {user.phone}
+        Phone: {user.phone}
       </div>
       <div>
-        Fecha de nacimiento: {user.birthdate}
+        Birthdate: {user.birthdate}
       </div>
       <div>
-        Agregado en: {user.addAt}
+        Added in: {user.addAt}
       </div>
     </div>
   )

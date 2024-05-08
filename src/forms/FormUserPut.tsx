@@ -39,49 +39,59 @@ export const FormUserPut = ({user}: {user: User}) => {
     return (
         <>
         <div className="form-container">
-        <h2>Editar Usuario de Id {user.id}</h2>
+        <h2>Edit User Id {user.id}</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
-                <label>Nombre: </label>
+                <label>Name: </label>
                 <input type='text' defaultValue={user.name} {...register("name",{
                     required: true,
                     pattern: /^[A-Za-z\s]+$/
                 })}/>
-                {errors.name?.type === "required" && <p className="error-message">Espacio requerido</p>}
-                {errors.name?.type === "pattern" && <p className="error-message">Solo se permiten letras y espacios</p>}
+                {errors.name?.type === "required" && <p className="error-message">This field is required</p>}
+                {errors.name?.type === "pattern" && <p className="error-message">Only letters and spaces are allowed</p>}
             </div>
             <div className="form-group">
-                <label>Trabajo: </label>
+                <label>Last Name: </label>
+                <input type='text' defaultValue={user.lastName} {...register("lastName",{
+                    required: true,
+                    pattern: /^[A-Za-z\s]+$/
+                })}/>
+                {errors.lastName?.type === "required" && <p className="error-message">This field is required</p>}
+                {errors.lastName?.type === "pattern" && <p className="error-message">Only letters and spaces are allowed</p>}
+            </div>
+            <div className="form-group">
+                <label>Job: </label>
                 <input type='text' defaultValue={user.job} {...register("job",{
                     required:true
                 })}/>
-                {errors.job?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.job?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
-                <label>Telefono: </label>
+                <label>Phone: </label>
                 <input type='text' defaultValue={user.phone} {...register("phone",{
                     required:true
                 })}
                 onChange={(e) => setValue('phone', formatPhone(e.target.value))}
                 />
-                {errors.phone?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.phone?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
-                <label>Direccion: </label>
+                <label>Address: </label>
                 <input type='text' defaultValue={user.address} {...register("address",{
                     required:true
                 })}/>
-                {errors.address?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.address?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
-                <label>Fecha de nacimiento: </label>
+                <label>Birthdate: </label>
                 <input type='date' defaultValue={user.birthdate} {...register("birthdate",{
                     required:true
                 })}/>
-                {errors.birthdate?.type === "required" && <p className="error-message">Espacio requerido</p>}
+                {errors.birthdate?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
             <div className="form-group">
-                <input type='submit' value='Enviar'/>
+                <input type="button"  value='Cancel' onClick={()=>navigate('/Proyecto-React/company')}/>
+                <input type='submit' value='Send'/>
             </div>
 
         </form>
