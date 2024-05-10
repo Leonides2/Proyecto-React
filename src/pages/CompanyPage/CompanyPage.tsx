@@ -6,7 +6,7 @@ import Pager from '../../components/Pager';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import ListEdit from '../../components/ListEdit';
-
+import './CompanyPage.css'
 
 type Sort = {
   atribute: string,
@@ -61,6 +61,9 @@ const onSubmit: SubmitHandler<Sort> = async(data) => {
 
   return (
     <>
+        <div>
+          <h1 style={{fontFamily: 'Segoe UI'}}>Company users maintenance</h1>
+        </div>
       <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
           <div>
             Search:

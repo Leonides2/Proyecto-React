@@ -1,7 +1,22 @@
 .header-container{
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 4px;
     align-items: center;
     justify-content: center;
+    margin: 4rem;
+}
+
+.homepage{
+    display: flex;
+    flex-direction: column;
+}
+.img-container{
+    height: 60dvh;
+    overflow-y: hidden;
+}
+
+.img-container img{
+    width: 100dvw;
+    height: auto;
 }

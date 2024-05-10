@@ -1,3 +1,9 @@
+.searchpage{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 .sort{
     display: flex;
     flex-direction: row;
@@ -17,6 +23,7 @@
     width: 8vw;
     padding: 1vh;
     border-radius: 8px;
+    flex-wrap: wrap;
 }
 
 .sort-container{

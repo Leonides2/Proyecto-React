@@ -6,6 +6,7 @@ import Pager from "../../components/Pager";
 import parseUserToTable from "../../logic/TableFunctions";
 import './HomePage.css'
 import ListHomeView from "../../components/ListHomeView";
+import img from './skyscraper.jpg'
 
 const HomePage = () => {
 
@@ -45,9 +46,13 @@ useEffect(() => {
 
   return (
     <>
+      <div className="homepage">
+        <div>
+          <h1 style={{fontFamily: 'Segoe UI'}}>Company system users</h1>
+        </div>
         <div className="header-container">
           <div>
-            Elementos por pagina:
+            Elements per page:
           </div>
           <div> 
             <SelectSize/>
@@ -56,6 +61,10 @@ useEffect(() => {
         <UsersCarusel users={users}/>
         <ListHomeView table={table}/>
         <Pager />
+        <div className="img-container">
+          <img alt="banner" src={img}/>
+        </div>
+      </div>
     </>
   )
 

@@ -1,4 +1,19 @@
 {
     "Title" : "Company",
-    "Footer" : "This is the footer, I'm only here to provide you a useful extra information"
+    "Footer-About" : {
+        "Title": "Company",
+        "Content" : "Is a leading company in the development of advanced technological solutions for companies of all sizes. Our highly trained team works closely with our clients to provide customized solutions that drive efficiency, productivity and business success."
+    },
+    "Footer-Adress" : {
+        "Title": "Address",
+        "Content" : "Company 123 , Northern Valleys, Newfoundland"
+    },
+    "Footer-Community" : {
+        "Title": "Community",
+        "Content" : {
+            "Support" : "Support",
+            "Contact" : "Contact us",
+            "About" : "About us"
+        }
+    }
 }

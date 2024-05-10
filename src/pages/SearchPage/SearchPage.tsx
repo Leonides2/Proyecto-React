@@ -70,7 +70,11 @@ useEffect(() => {
 
   return (
     <>
-      <div>
+      <div className="searchpage">
+
+        <div>
+          <h1 style={{fontFamily: 'Segoe UI'}}>Search users</h1>
+        </div>
         <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
           <div>
             Search:

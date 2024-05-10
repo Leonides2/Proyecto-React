@@ -1,11 +1,10 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-
     background-color: rgb(255, 255, 255);
-    padding: 1rem;
+    padding-inline: 1rem;
+    align-items: center;
 }
-
 
 #navbar{
     grid-area: nav;
@@ -50,4 +49,14 @@ img{
 
 .navbar h1 {
     font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        margin: 2rem 0;
+    }
 }
