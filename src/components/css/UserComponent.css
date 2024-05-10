@@ -1,7 +1,6 @@
 .user-data-container{
     display: flex;
     flex-direction: column;
-    
     margin: 2rem; /* Ajustar el margen para dispositivos móviles */
     padding: 1rem; /* Ajustar el padding para dispositivos móviles */
     align-items: start;

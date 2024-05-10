@@ -106,9 +106,10 @@ useEffect(() => {
             <SelectSize/>
           </div>
         </form>
-      </div>
+      
       <ListView table={table}/>
       <Pager/>
+      </div>
     </>
   )
 }

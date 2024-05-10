@@ -1,8 +1,4 @@
 
-/*
-.table-wrapper{
-    margin: 10px 70px 70px;
-}*/
 
 .fl-table {
     border-radius: 5px;
@@ -10,7 +6,7 @@
     font-weight: normal;
     border: none;
     border-collapse: collapse;
-    width: 100%;
+    width: 100dvw;
     max-width: 100%;
     white-space: nowrap;
     background-color: #ffffff;
@@ -38,25 +34,19 @@
     background: #dd101060;
 }
 
-/*
-.fl-table tr:nth-child(even) {
-    background: #242424;
-}*/
-
-/* Responsive */
-
 @media (max-width: 767px) {
     .fl-table {
         display: block;
-        width: 100%;
+        width: 20rem;
     }
     .table-wrapper:before{
         content: "Scroll >>";
-        display: block;
+        display: grid;
         text-align: right;
+        width: 20rem;
         font-size: 11px;
-        color: #ffffff,
-        /*padding: 0px 0px 10px;*/
+        color: #ffffff;
+        padding: 0px 0px 10px;
     }
     .fl-table thead, .fl-table tbody, .fl-table thead th {
         display: block;
@@ -68,8 +58,8 @@
         float: left;
     }
     .fl-table tbody {
-        width: auto;
-        position: relative;
+        width: 1fr;
+        position: initial;
         overflow-x: auto;
     }
     .fl-table td, .fl-table th {

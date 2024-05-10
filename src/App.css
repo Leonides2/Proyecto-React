@@ -1,8 +1,5 @@
 #root {
-  min-width: fit-content;
   min-height: 100dvh;
-  /*120dvw;*/
-  
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -11,21 +8,30 @@
   "main"
   "footer"
   ;
-  grid-template-rows: 10% 1fr 10%;
-  grid-template-columns: 100dvw;
 }
 
 #main{
   grid-area: main;
 }
 
-.card {
-  padding: 2em; 
-
-}
 
 @media (max-width: 767px) {
   #root{
-    min-height: -moz-fit-content;
+
+    min-width: 100dvw;
+    min-height: 150dvh;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer"
+    ;
+
   }
+  #main{
+    grid-area: main;
+    width: 100dvw;
+  }
+
 }

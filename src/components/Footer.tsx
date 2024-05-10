@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className='comunity-adress'>
 
           <div className='footer-adress'>
-            <div>
+            <div id='footer-adress-title'>
               {UI['Footer-Adress'].Title}
             </div>
             <div>
@@ -27,7 +27,7 @@ export const Footer = () => {
 
           <div className='footer-comunity'>
 
-            <div>
+            <div id='footer-comunity-title'>
               {UI['Footer-Community'].Title}
             </div>
 

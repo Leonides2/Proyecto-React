@@ -8,7 +8,6 @@
     padding: 0.3rem 0.5rem; 
     box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
     background-color: white;
-    line-height: 1.5;
     margin: 0;
     
 }
@@ -18,17 +17,21 @@
     justify-content: center;
     gap: 12px;
     padding: 2rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
     .pager button {
-        font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
-        padding: 0.5rem 1rem; /* Ajusta el padding para aumentar el tamaño del botón */
+        font-size: 2rem; 
+        padding: 0.5rem 1rem; 
     }
     .pager{
         overflow-x: scroll;
-        padding: 2rem 8rem;
+        margin-left: 3rem;
+        margin-right: 3rem ;
+        width: 15rem;
+        display: flex;
+        justify-items: flex-start;
     }
 }
