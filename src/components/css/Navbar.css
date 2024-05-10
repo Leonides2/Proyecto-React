@@ -1,9 +1,10 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 96, 96);
     padding-inline: 1rem;
     align-items: center;
+    border-bottom: 2px solid black;
 }
 
 #navbar{
@@ -14,11 +15,14 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    
 }
 
 .favicon-container h1{
     font-style: normal;
     text-decoration: none;
+    background-color: rgb(238, 96, 96);
+     
 }
 
 .navbar button{
@@ -32,6 +36,8 @@
     border-radius: 8px;
     padding: 0.5rem 0.75rem;
     cursor: pointer;
+    background-color:  rgb(238, 96, 96);
+    
 }
 
 .navbar .favicon-container .title-button{
@@ -39,6 +45,7 @@
     flex-direction: row;
     align-items: center;
     gap: 12px;
+    background-color: rgb(238, 96, 96);
 }
 
 img{
@@ -55,8 +62,24 @@ img{
     .navbar{
         display: flex;
         flex-direction: column;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(238, 96, 96);
         align-items: center;
         margin: 2rem 0;
     }
 }
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        background-color:  rgb(238, 96, 96);
+        align-items: center;
+        margin: 2rem 0;
+        border-bottom: none; /* Eliminar la línea negra en dispositivos móviles */
+    }
+
+    .navbar button {
+        margin-top: 1rem; /* Añadir margen superior a los botones en dispositivos móviles */
+    }
+}
+ 

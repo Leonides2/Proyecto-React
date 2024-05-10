@@ -1,5 +1,4 @@
 
-
 /*
 .table-wrapper{
     margin: 10px 70px 70px;
@@ -30,13 +29,13 @@
 
 .fl-table thead th {
     color: #ffffff;
-    background: #00000060;
+    background: #dd101091;
 }
 
 
 .fl-table thead th:nth-child(odd) {
     color: #ffffff;
-    background: #0000004f;
+    background: #dd101060;
 }
 
 /*

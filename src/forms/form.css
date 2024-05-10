@@ -1,7 +1,7 @@
 textarea,
 input,
 button {
-  font-size: 1rem;
+  font-size: 0.9rem; 
   font-family: inherit;
   border: none;
   border-radius: 8px;
@@ -10,6 +10,7 @@ button {
   background-color: white;
   line-height: 1.5;
   margin: 0;
+  width: 100%;
 }
 
 
@@ -33,13 +34,14 @@ button:active {
     display: flex; 
     flex-direction: column; 
     max-width: 500px; 
+    max-width: 90%;
     margin: 0 auto; 
   }
   
-  .form-group {
-    margin-bottom: 25px; 
-  }
   
+  .form-group {
+    margin-bottom: 15px; /* Reducir el espacio entre los grupos de formulario */
+  }
   .form-group label {
     font-weight: bold; 
   }

@@ -1,21 +1,26 @@
 .footer{
+    border-top: 3px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #f0f0f0
+    background-color: rgb(238, 96, 96);
 }
+ 
 .about{
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 25rem;
     font-size: 0.7rem;
+    align-items: center; 
 }
 .comunity-adress{
     display: flex;
     flex-direction: row;
     gap: 12px;
+    align-items: center; 
+     
 }
 .footer-adress{
     display: flex;
@@ -23,22 +28,53 @@
     gap: 12px;
     font-size: 0.7rem;
     width: 10rem;
+     
+     
 }
 .footer-comunity{
     display: flex;
     flex-direction: column;
     gap: 12px;
     font-size: 0.7rem;
+    align-items: center; 
 }
 
 .comunity-container-items{
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    align-items: center; 
 }
 #footer{
     grid-area: footer;
 }
 #footer-about-title{
+    font-size: 2rem;
     justify-content: start;
 }
+.about, .footer-adress, .footer-comunity {
+    display: flex;
+    
+    
+}
+.about, .footer-comunity {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 25rem;
+    font-size: 0.7rem;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Cambiar a diseño de columna */
+        align-items: center; /* Centrar elementos */
+    }
+    
+    .about, .footer-adress, .footer-comunity {
+        width: auto; /* Ancho automático */
+        text-align: center; /* Centrar texto */
+    }
+}
+
+ 
