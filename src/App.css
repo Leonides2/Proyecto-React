@@ -2,6 +2,7 @@
   min-width: fit-content;
   min-height: 100dvh;
   /*120dvw;*/
+  
   margin: 0 auto;
   text-align: center;
   display: grid;

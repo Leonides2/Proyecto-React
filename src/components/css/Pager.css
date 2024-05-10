@@ -17,7 +17,8 @@
     flex-direction: row;
     justify-content: center;
     gap: 12px;
-     
+    padding: 2rem;
+    overflow-x: scroll;
 }
 
 /* Estilos para dispositivos móviles */
@@ -25,5 +26,9 @@
     .pager button {
         font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
         padding: 0.5rem 1rem; /* Ajusta el padding para aumentar el tamaño del botón */
+    }
+    .pager{
+        overflow-x: scroll;
+        padding: 2rem 8rem;
     }
 }
