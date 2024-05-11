@@ -1,7 +1,7 @@
 
 import { useParams } from 'react-router';
 import { UserComponent } from '../../components/UserComponent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -9,26 +9,24 @@ export const UserViewPage = () => {
     const { userId } = useParams();
     const [user, setUser] = useState<User |undefined>()
 
-    fetch(`https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users/${userId}`)
-    .then(response => response.json())
-    .then(response => {
-            setUser({
-                id: response.id,
-                address: response.address,
-                image: response.image,
-                name: response.name,
-                lastName: response.lastName,
-                job: response.job,
-                phone: response.phone,
-                birthdate: response.birthdate,
-                addAt: response.addAt
-            })
-    })
+    async function fetching(){
+      try {
+        const response = await fetch(`https://663148cdc92f351c03dcb0e3.mockapi.io/resources/Users/${userId}`); 
+        const data = await response.json(); 
+        setUser(data);
+    } catch (error) {
+          console.error(error);
+        }
+    }
+
+    useEffect(()=>{
+      fetching()
+    }, [userId])
 
     
   return (
     <>    
-    { user != undefined ? <UserComponent user={user} /> : <div>Error: no se se pudo encontrar el usuario</div> }
+      <UserComponent user={user}/>
     </>
 
   )

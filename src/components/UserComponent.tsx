@@ -4,7 +4,22 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import UsersContext from '../context/UsersContext'
 
-export const UserComponent = ({user}:{user: User}) => {
+let defaultUser : User = {
+  id: 1,
+  addAt:"",
+  address: "",
+  birthdate: 123123,
+  image: "",
+  job: "",
+  lastName: "",
+  name: "",
+  phone: ""
+}
+
+
+export const UserComponent = ({user = defaultUser}) => {
+
+
 
   const {setLimit, setSkip} = useContext(UsersContext);
   return (
