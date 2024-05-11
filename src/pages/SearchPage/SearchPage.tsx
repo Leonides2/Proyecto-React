@@ -76,34 +76,43 @@ useEffect(() => {
           <h1 style={{fontFamily: 'Segoe UI'}}>Search users</h1>
         </div>
         <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            Search:
+          <div className='select-search' id="select-search">
+            <div>
+              Search:
+            </div>
+            <div>
+              <select {...register("atribute")}>
+                  <option value={"id"}>Id</option>
+                  <option value={"address"}>Address</option>
+                  <option value={"name"}>Name</option>
+                  <option value={"lastName"}>LastName</option>
+                  <option value={"job"}>Job</option>
+                  <option value={"phone"}>Phone</option>
+                  <option value={"addAt"}>AddAt</option>
+              </select>   
+            </div>
           </div>
-          <div>
-            <select {...register("atribute")}>
-                <option value={"id"}>Id</option>
-                <option value={"address"}>Address</option>
-                <option value={"name"}>Name</option>
-                <option value={"lastName"}>LastName</option>
-                <option value={"job"}>Job</option>
-                <option value={"phone"}>Phone</option>
-                <option value={"addAt"}>AddAt</option>
-            </select>
-            
+
+          
+          <div id="text-area" className="text-area-container">
+            <div className="text-area">
+              <label></label>
+              <input type="text" {...register("value",{required:true})} />
+              {errors.value?.type === "required" && <p className="error-message">Required</p>}
+            </div>
+
+            <div id="search-button">
+                <input type='submit' value='Search' onClick={()=>context.setSkip(1)}/>
+            </div>
+
           </div>
-          <div className="text-area">
-            <label></label>
-            <input type="text" {...register("value",{required:true})} />
-            {errors.value?.type === "required" && <p className="error-message">Required</p>}
-          </div>
-          <div>
-              <input type='submit' value='Search' onClick={()=>context.setSkip(1)}/>
-          </div>
-          <div>
-            Elements per page:
-          </div>
-          <div> 
-            <SelectSize/>
+
+
+          <div className="select-size-container" id="select-size">
+            <div>
+              Elements per page:
+            </div>
+              <SelectSize/>
           </div>
         </form>
       

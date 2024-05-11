@@ -10,6 +10,7 @@
     max-width: 100%;
     white-space: nowrap;
     background-color: #ffffff;
+    border-bottom: 2px solid black;
 }
 
 .fl-table td, .fl-table th {
@@ -34,6 +35,18 @@
     background: #dd101060;
 }
 
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 10%;
+}
+
+#delete-user-button:hover,
+#delete-user-button:active{
+    transition: 0.5s;
+    background-color: red;
+}
 @media (max-width: 767px) {
     .fl-table {
         display: block;
@@ -62,7 +75,18 @@
         position: initial;
         overflow-x: auto;
     }
-    .fl-table td, .fl-table th {
+    .fl-table td{
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: fit-content;
+        font-size: 13px;
+    }
+
+    .fl-table th {
         padding: 20px .625em .625em .625em;
         height: 60px;
         vertical-align: middle;
@@ -71,7 +95,6 @@
         overflow-y: auto;
         width: 120px;
         font-size: 13px;
-        text-overflow: ellipsis;
     }
     .fl-table thead th {
         text-align: left;
@@ -97,4 +120,5 @@
         display: block;
         text-align: center;
     }
+    
 }

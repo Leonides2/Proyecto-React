@@ -1,0 +1,78 @@
+.companypage{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sort{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.sort-container div select option{
+    border: none;
+    background-color: white;
+}
+
+.sort-container  div select{
+    border: none;
+    box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+    background-color: white;
+    height: 6vh;
+    width: max-content;
+    padding: 2vh;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.sort-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.select-search{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-area-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-size-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-area{
+    display: flex;
+    gap: 12px;
+}
+
+.error-message {
+    color: red; 
+  }
+
+.add-user:active,
+.add-user:hover{
+    transition: 0.5s;
+    background-color: darkolivegreen;
+}

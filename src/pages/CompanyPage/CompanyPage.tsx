@@ -61,45 +61,56 @@ const onSubmit: SubmitHandler<Sort> = async(data) => {
 
   return (
     <>
-        <div>
-          <h1 style={{fontFamily: 'Segoe UI'}}>Company users maintenance</h1>
-        </div>
-      <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
+    <div className="companypage">
           <div>
-            Search:
+            <h1 style={{fontFamily: 'Segoe UI'}}>Company users maintenance</h1>
           </div>
-          <div>
-            <select {...register("atribute")}>
-                <option value={"id"}>Id</option>
-                <option value={"address"}>Address</option>
-                <option value={"name"}>Name</option>
-                <option value={"lastName"}>LastName</option>
-                <option value={"job"}>Job</option>
-                <option value={"phone"}>Phone</option>
-                <option value={"addAt"}>AddAt</option>
-            </select>
+        <form className='sort-container' onSubmit={handleSubmit(onSubmit)}>
+          <div className='select-search' id="select-search">
+
+              <div>
+                Search:
+              </div>
+              <div>
+                <select {...register("atribute")}>
+                    <option value={"id"}>Id</option>
+                    <option value={"address"}>Address</option>
+                    <option value={"name"}>Name</option>
+                    <option value={"lastName"}>LastName</option>
+                    <option value={"job"}>Job</option>
+                    <option value={"phone"}>Phone</option>
+                    <option value={"addAt"}>AddAt</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div id="text-area" className="text-area-container">
+              <div className="text-area">
+                <label></label>
+                <input type="text" {...register("value",{required:true})} />
+                {errors.value?.type === "required" && <p className="error-message">Required</p>}
+              </div>
+              <div>
+                  <input type='submit' value='Search' onClick={()=>context.setSkip(1)}/>
+              </div>
+            </div>
+
+            <div className="select-size-container" id="select-size">
+              <div>
+                Elements per page:
+              </div>
+                <SelectSize/>
+            </div>
             
-          </div>
-          <div className="text-area">
-            <label></label>
-            <input type="text" {...register("value",{required:true})} />
-            {errors.value?.type === "required" && <p className="error-message">Required</p>}
-          </div>
-          <div>
-              <input type='submit' value='Search' onClick={()=>context.setSkip(1)}/>
-          </div>
-          <div>
-            Elements per page:
-          </div>
-          <div> 
-            <SelectSize/>
-          </div>
-          <Link to={'/Proyecto-React/company/addUser'}>
-              <button> Add User</button>
-          </Link>
-        </form>
-        <ListEdit table={table}/>
-        <Pager/>
+
+            <Link to={'/Proyecto-React/company/addUser'}>
+                <button className='add-user'> Add User</button>
+            </Link>
+          </form>
+          <ListEdit table={table}/>
+          <Pager/>
+        </div>
     </>
   )
 }

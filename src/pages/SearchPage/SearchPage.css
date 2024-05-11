@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
 }
 
 .sort{
@@ -22,8 +24,8 @@
     box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
     background-color: white;
     height: 6vh;
-    width: 8vw;
-    padding: 1vh;
+    width: max-content;
+    padding: 2vh;
     border-radius: 8px;
     flex-wrap: wrap;
 }
@@ -37,6 +39,30 @@
 
 }
 
+.select-search{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-area-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-size-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
 .text-area{
     display: flex;
     gap: 12px;
@@ -46,3 +72,65 @@
     color: red; 
   }
 
+  @media (max-width: 767px) {
+    .sort-container{
+        display: grid;
+        grid-template-areas: 
+        "type"
+        "text"
+        "count"
+        ;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }    
+    #text-area{
+        grid-area: text;
+        width: 100%;
+    }
+    #select-search{
+        grid-area: type;
+        width: 100%;
+    }
+    #select-size{
+        grid-area: count;
+        width: 100%;
+    }
+    .select-search{
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .select-search div select{
+        border: none;
+        width: max-content;
+        height: 5dvh;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .text-area-container{
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .text-area{
+        display: flex;
+        gap: 0px;
+        height: 5dvh;
+
+    }
+
+    .select-size-container{
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+  }

@@ -23,7 +23,7 @@ const ListEdit = ({table}:{table:Table |undefined}) => {
                             {table.columns.map((column, colIndex) => (
                                 <td key={colIndex}>{column.rows[rowIndex].content}</td>
                             ))}
-                            <td>
+                            <td className='button-container'>
                                 <Link className="edit-user-button" to={`/Proyecto-React/company/view/${table.columns[0].rows[rowIndex].content}`}>
                                     <button>View</button>
                                     </Link>
@@ -31,7 +31,7 @@ const ListEdit = ({table}:{table:Table |undefined}) => {
                                     <button>Edit</button>
                                     </Link>
                                 <Link className="edit-user-button" to={`/Proyecto-React/company/delete/${table.columns[0].rows[rowIndex].content}`}>
-                                    <button>Delete</button>
+                                    <button id='delete-user-button'>Delete</button>
                                     </Link>
                             </td>
                         </tr>

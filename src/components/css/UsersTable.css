@@ -27,7 +27,7 @@
  /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
     .carrussel {
-        font-size: 0.8rem; /* Tamaño de fuente más pequeño */
-        max-width: 80%; /* Ancho máximo más pequeño */
+        font-size: 0.8rem; 
+        max-width: 80%; 
     }
 }
