@@ -1,5 +1,4 @@
-textarea,
-input,
+
 .button {
   font-size: 0.9rem; 
   font-family: inherit;
@@ -14,36 +13,34 @@ input,
 }
 
 
-textarea:hover,
-input:hover,
-button:hover {
-  box-shadow: none;
-}
-
-button:active {
-  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
-  transform: translateY(1px);
-}
-
 .form-container {
     background-color: #f0f0f0; 
     padding: 20px;  
-    justify-content: center;
-    align-items: center;
     border-radius: 8px; 
     display: flex; 
     flex-direction: column; 
-    max-width: 500px; 
-    max-width: 90%;
+    width: fit-content;
     margin: 0 auto; 
   }
   
   
   .form-group {
-    margin-bottom: 15px; /* Reducir el espacio entre los grupos de formulario */
+    margin-bottom: 15px; 
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
   }
   .form-group label {
     font-weight: bold; 
+  }
+  .form-buttons{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
   }
   
   .error-message {

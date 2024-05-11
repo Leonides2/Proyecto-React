@@ -89,7 +89,7 @@ export const FormUserPost = () => {
                 })}/>
                 {errors.birthdate?.type === "required" && <p className="error-message">This field is required</p>}
             </div>
-            <div className="form-group">
+            <div className="form-buttons">
                 <input className='button' type="button"  value='Cancel' onClick={()=>navigate('/Proyecto-React/company')}/>
                 <input className= 'button' type='submit' value='Send'/>
             </div>
